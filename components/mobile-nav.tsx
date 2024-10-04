@@ -49,15 +49,6 @@ export function MobileNav({ items, children }: MobileNavProps) {
               </Link>
             </>
           ))}{" "}
-          <Link
-            aria-label="navbar items"
-            href={`${siteConfig.blogSiteUrl}`}
-            className={cn(
-              "flex w-full items-end z-80 text-5xl mb-5 rounded-md p-2 dmsans hover:underline"
-            )}
-          >
-            Blogs
-          </Link>
         </nav>
         {children}
       </div>
