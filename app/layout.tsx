@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: `${siteConfig.description}`,
     url: "./",
     siteName: `${siteConfig.name}`,
-    images: `${siteConfig.blogSiteUrl}/my-banner.jpeg`,
     locale: "en_US",
     type: "website",
   },
@@ -48,18 +47,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: `${siteConfig.name}`,
-    card: "summary_large_image",
-    images: [
-      {
-        url: `${siteConfig.blogSiteUrl}/my-banner.jpeg`,
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
+  }
 };
 
 export default function RootLayout({
@@ -98,17 +86,12 @@ export default function RootLayout({
 
         <meta
           property="og:image"
-          content={`${siteConfig.blogSiteUrl}/my-banner.jpeg`}
         />
 
         <meta name="description" content="Portfolio website" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={`${siteConfig.name}`} />
         <meta name="twitter:description" content="Portfolio website" />
-        <meta
-          name="twitter:image"
-          content={`${siteConfig.blogSiteUrl}/my-banner.jpeg`}
-        />
       </Head>
       <body
         className="md:ml-0 ml-0 dark:selection:bg-purple-950 selection:bg-green-400"
